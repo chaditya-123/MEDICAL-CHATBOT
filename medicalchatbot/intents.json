@@ -1,0 +1,67 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good Morning"],
+      "responses": [
+        "Hello! How can I help you today?",
+        "Hi! Tell me your symptoms."
+      ]
+    },
+    {
+      "tag": "fever",
+      "patterns": [
+        "I have fever",
+        "My body is hot",
+        "I am suffering from fever"
+      ],
+      "responses": [
+        "You may have a viral infection. Drink plenty of water and consult a doctor if symptoms persist."
+      ]
+    },
+    {
+      "tag": "cold",
+      "patterns": [
+        "I have cold",
+        "Runny nose",
+        "Sneezing continuously"
+      ],
+      "responses": [
+        "It may be a common cold. Take rest and stay hydrated."
+      ]
+    },
+    {
+      "tag": "headache",
+      "patterns": [
+        "I have headache",
+        "Head pain",
+        "Migraine symptoms"
+      ],
+      "responses": [
+        "Headaches can occur for many reasons. Rest and hydration may help."
+      ]
+    },
+    {
+      "tag": "cough",
+      "patterns": [
+        "I am coughing",
+        "Dry cough",
+        "Severe cough"
+      ],
+      "responses": [
+        "Persistent cough should be evaluated by a healthcare professional."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "bye",
+        "goodbye",
+        "see you"
+      ],
+      "responses": [
+        "Take care. Stay healthy!"
+      ]
+    }
+  ]
+}

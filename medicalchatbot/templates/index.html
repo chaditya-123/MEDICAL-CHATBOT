@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Chatbot</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            text-align:center;
+            margin-top:50px;
+        }
+
+        #chatbox{
+            width:70%;
+            margin:auto;
+        }
+
+        input{
+            width:60%;
+            padding:10px;
+        }
+
+        button{
+            padding:10px 20px;
+        }
+
+        #result{
+            margin-top:20px;
+            font-size:18px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<h1>Medical Chatbot Using NLP</h1>
+
+<div id="chatbox">
+
+<input type="text"
+       id="userInput"
+       placeholder="Enter your symptoms">
+
+<button onclick="sendMessage()">
+Send
+</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+function sendMessage(){
+
+    let text = document.getElementById("userInput").value;
+
+    fetch("/get?msg="+text)
+
+    .then(response=>response.text())
+
+    .then(data=>{
+
+        document.getElementById("result").innerHTML=
+        "<b>Bot:</b> "+data;
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
